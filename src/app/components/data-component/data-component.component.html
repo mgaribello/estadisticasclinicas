@@ -1,0 +1,153 @@
+<div class="row">
+  <br />
+  <div class="col-md-3">
+    <label for="">Filtrar por ruta de Atención</label>
+    <select
+      class="form-select"
+      [(ngModel)]="porcentajedinamico"
+      name="porcentajedinamico"
+      (change)="fnvalidaporcentaje()"
+    >
+      <option *ngFor="let ruta of rutaatencion" [value]="ruta" selected>
+        {{ ruta }}
+      </option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label for="">Filtrar por EPS</label>
+    <select class="form-select">
+      <option *ngFor="let filtroeps of eps">{{ filtroeps }}</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label for="">Filtrar por Grupos de Edad</label>
+    <select class="form-select">
+      <option *ngFor="let edades of gruposedad">{{ edades }}</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <br />
+  <br />
+  <div class="col-md-6">
+    <div class="svg-item">
+      <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+        <circle
+          class="donut-hole"
+          cx="20"
+          cy="20"
+          r="15.91549430918954"
+          fill="#fff"
+        ></circle>
+        <circle
+          class="donut-ring"
+          cx="20"
+          cy="20"
+          r="15.91549430918954"
+          fill="transparent"
+          stroke-width="3.5"
+        ></circle>
+        <circle
+          class="donut-segment"
+          cx="20"
+          cy="20"
+          r="15.91549430918954"
+          fill="transparent"
+          stroke-width="3.5"
+          [attr.stroke-dasharray]="porcentaje + ' ' + (100 - porcentaje)"
+          stroke-dashoffset="25"
+        ></circle>
+        <g class="donut-text">
+          <text y="50%" transform="translate(0, 2)">
+            <tspan x="50%" text-anchor="middle" class="donut-percent">
+              {{ porcentaje }}%
+            </tspan>
+          </text>
+        </g>
+      </svg>
+      <p class="textoporc">
+        Valoración de soporte oncológico completa - etapa de diagnostico
+
+        <button class="btn btn-warning" (click)="fndetalle()">
+          Ver Detalle
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="textup">
+      <strong
+        >Cubrimiento por profesional para el 40% que está fuera de la
+        meta</strong
+      >
+    </div>
+
+    <br />
+
+    <div class="progress baralto">
+      <strong class="porcenta">{{ psicologia }} %</strong>
+      <strong class="especialidad">Psicología</strong>
+      <div
+        class="progress-bar psico"
+        role="progressbar"
+        aria-valuenow="65"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: {{ psicologia }}%"
+      ></div>
+    </div>
+    <br />
+    <div class="progress baralto">
+      <strong class="porcenta">{{ nutricion }}%</strong>
+      <strong class="especialidad">Nutricion</strong>
+      <div
+        class="progress-bar nutri"
+        role="progressbar"
+        aria-valuenow="45"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: {{ nutricion }}%"
+      ></div>
+    </div>
+    <br />
+    <div class="progress baralto">
+      <strong class="porcenta">{{ trabajosocial }}%</strong>
+      <strong class="especialidad">Trabajo Social</strong>
+      <div
+        class="progress-bar tsocial"
+        role="progressbar"
+        aria-valuenow="45"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: {{ trabajosocial }}%"
+      ></div>
+    </div>
+    <br />
+    <div class="progress baralto">
+      <strong class="porcenta">{{ enfermeria }}%</strong>
+      <strong class="especialidad">Enfermeria</strong>
+      <div
+        class="progress-bar enfermeria"
+        role="progressbar"
+        aria-valuenow="45"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: {{ enfermeria }}%"
+      ></div>
+    </div>
+    <br />
+    <div class="progress baralto">
+      <strong class="porcenta">{{ cuidadopaleativo }}%</strong>
+      <strong class="especialidad">Cuidado Paleativo</strong>
+      <div
+        class="progress-bar cpaleativo"
+        role="progressbar"
+        aria-valuenow="45"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="width: {{ cuidadopaleativo }}%"
+      ></div>
+    </div>
+  </div>
+</div>

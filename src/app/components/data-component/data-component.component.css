@@ -1,0 +1,120 @@
+@keyframes donut-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
+}
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+}
+
+.textoporc {
+  color: #8c511b;
+  font-size: medium;
+  text-align: center;
+}
+
+.boton {
+  position: relative;
+}
+
+.textup {
+  background-color: darkcyan;
+  color: white;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.psico {
+  background-color: #10739d;
+}
+
+.nutri {
+  background-color: #f2931d;
+}
+
+.tsocial {
+  background-color: #af4132;
+}
+
+.enfermeria {
+  background-color: #22445d;
+}
+
+.cpaleativo {
+  background-color: #12aab5;
+}
+
+.baralto {
+  height: 50px !important;
+}
+
+.porcenta {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-size: medium;
+  color: #ebebeb;
+}
+.especialidad {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  font-size: medium;
+  color: #000;
+}
+
+.svg-item {
+  width: 600px;
+  height: 400px;
+  font-size: 16px;
+  align-self: center;
+  padding: 50px;
+}
+.donut-ring {
+  stroke: #ebebeb;
+}
+
+.donut-segment {
+  animation: donut-chart-fill 1s reverse ease-in;
+  transform-origin: center;
+  stroke: #ff6200;
+}
+
+.donut-text {
+  font-family: Arial, Helvetica, sans-serif;
+  fill: #ff6200;
+}
+
+.donut-label {
+  font-size: 0.28em;
+  font-weight: 700;
+  line-height: 1;
+  fill: #000;
+  transform: translateY(0.25em);
+}
+
+.donut-percent {
+  font-size: 0.5em;
+  fill: #ff6200;
+  line-height: 1;
+  transform: translateY(0.5em);
+}
+
+.progress {
+  position: relative;
+  height: 70px;
+}
+.raised {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+}
+.goal {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}

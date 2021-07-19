@@ -1,0 +1,138 @@
+<div class="d-flex" id="wrapper">
+  <div
+    class="bg-light border-right"
+    id="sidebar-wrapper"
+    [ngClass]="status ? 'hide' : 'show'"
+  >
+    <div class="sidebar-heading">4SL</div>
+
+    <div class="wrapper">
+      <nav id="sidebar">
+        <ul
+          class="list-unstyled components shadow-lg p-3 mb-5 bg-white rounded"
+        >
+          <p>Cuadro de Gestión</p>
+          <li class="active">
+            <a
+              href="#"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Cuadro de Gestión</a
+            >
+            <ul class="collapse list-unstyled">
+              <li>
+                <a href="#">Gestion 1</a>
+              </li>
+              <li>
+                <a href="#">Gestion 2</a>
+              </li>
+              <li>
+                <a href="#">Gestion 3</a>
+              </li>
+              <li>
+                <a href="#">Users</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Oportunidad</a>
+          </li>
+          <li>
+            <a href="#">Gestión Clinica</a>
+          </li>
+          <li>
+            <a href="#">Valoracion Soporte Oncológico</a>
+          </li>
+          <li>
+            <a href="#">Tiempo UFCA - Comité</a>
+          </li>
+          <li>
+            <a
+              href="#pageSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Oportunidad QRCx</a
+            >
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Oportunidad 1</a>
+              </li>
+              <li>
+                <a href="#">Oportunidad 2</a>
+              </li>
+              <li>
+                <a href="#">Oportunidad 3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Satisfacción</a>
+          </li>
+          <li>
+            <a
+              href="#sysAdmin"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Alertas</a
+            >
+            <ul class="collapse list-unstyled" id="sysAdmin">
+              <li><a href="#">Alerta 1</a></li>
+              <li><a href="#">Alerta 2</a></li>
+              <li><a href="#">Alerta 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="btn btn-light" (click)="clickEvent()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+
+        <div class="avatar">
+          <img src="https://www.w3schools.com/w3css/img_avatar2.png" />
+          <span>Sandra Rozo</span>
+
+          <button class="btn btn-light" (click)="clickEvent()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <app-data-component></app-data-component>
+    </div>
+  </div>
+</div>
